@@ -2,51 +2,55 @@
   "contractName": "CourseManagement",
   "abi": [
     {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "courseAdded",
+      "type": "event"
+    },
+    {
       "constant": false,
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "x",
+          "name": "courseID",
           "type": "uint256"
         }
       ],
-      "name": "set",
+      "name": "buyCourse",
       "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "get",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
+      "payable": true,
+      "stateMutability": "payable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CourseManagement.sol\":\"CourseManagement\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/CourseManagement.sol\":{\"keccak256\":\"0xd22864b203556f7b06e69e02c7e9774a101344cffad1d71202079d7fe0e845c0\",\"urls\":[\"bzz-raw://c650305090b1eb77140e707a8448b0b7b0f6e6255cf9671b72872f11ce9a1d96\",\"dweb:/ipfs/QmP2mPpPWu7c9SQQd6NstEXdEMTQNentdpgwCyzvdL3r9B\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060c68061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea265627a7a72315820f7f398cab8d1114f0647d51dca0c11223c017715cfa175f3d4bd9b1e56cab8db64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea265627a7a72315820f7f398cab8d1114f0647d51dca0c11223c017715cfa175f3d4bd9b1e56cab8db64736f6c63430005100032",
-  "sourceMap": "67:179:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:179:0;;;;;;;",
-  "deployedSourceMap": "67:179:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:179:0;;;;;;;;;;;;;;;;;;;;;;;;117:53;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;117:53:0;;;;;;;;;;;;;;;;;:::i;:::-;;174:70;;;:::i;:::-;;;;;;;;;;;;;;;;;;;117:53;164:1;151:10;:14;;;;117:53;:::o;174:70::-;210:4;229:10;;222:17;;174:70;:::o",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <8.10.0;\n\ncontract CourseManagement {\n  uint storedData;\n\n  function set(uint x) public {\n    storedData = x;\n  }\n\n  function get() public view returns (uint) {\n    return storedData;\n  }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"courseAdded\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"courseID\",\"type\":\"uint256\"}],\"name\":\"buyCourse\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CourseManagement.sol\":\"CourseManagement\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/CourseManagement.sol\":{\"keccak256\":\"0xaf09322be0271a24bdf39122a7907e0c7890716ad93270f5d5d243e48ecb358f\",\"urls\":[\"bzz-raw://1080ee3ebe8a8438882d7c8c9abd354380a6bbed6e00c151cc5f6f9effa3eee9\",\"dweb:/ipfs/QmSoUFrWN86pVSxg3dqDv1TpCMgjhw8cwStx1kwAaKxVuS\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5033600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506101a8806100616000396000f3fe60806040526004361061001e5760003560e01c8063194d73a214610023575b600080fd5b61004f6004803603602081101561003957600080fd5b8101908080359060200190929190505050610051565b005b6000808281526020019081526020016000206003015434101561007357600080fd5b60008082815260200190815260200160002060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc600080848152602001908152602001600020600301549081150290604051600060405180830381858888f19350505050158015610103573d6000803e3d6000fd5b50600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018190806001815401808255809150509060018203906000526020600020016000909192909190915055505056fea265627a7a72315820355e02b89194489b77afc8648da09c0f7d99872af33d1a5eb22b740d4f63f08364736f6c63430005100032",
+  "deployedBytecode": "0x60806040526004361061001e5760003560e01c8063194d73a214610023575b600080fd5b61004f6004803603602081101561003957600080fd5b8101908080359060200190929190505050610051565b005b6000808281526020019081526020016000206003015434101561007357600080fd5b60008082815260200190815260200160002060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc600080848152602001908152602001600020600301549081150290604051600060405180830381858888f19350505050158015610103573d6000803e3d6000fd5b50600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018190806001815401808255809150509060018203906000526020600020016000909192909190915055505056fea265627a7a72315820355e02b89194489b77afc8648da09c0f7d99872af33d1a5eb22b740d4f63f08364736f6c63430005100032",
+  "sourceMap": "67:1203:0:-;;;793:56;8:9:-1;5:2;;;30:1;27;20:12;5:2;793:56:0;832:10;824:5;;:18;;;;;;;;;;;;;;;;;;67:1203;;;;;;",
+  "deployedSourceMap": "67:1203:0:-;;;;;;;;;;;;;;;;;;;;;855:252;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;855:252:0;;;;;;;;;;;;;;;;;:::i;:::-;;;939:10;:20;950:8;939:20;;;;;;;;;;;:26;;;925:9;:41;;917:50;;;;;;977:10;:20;988:8;977:20;;;;;;;;;;;:33;;;;;;;;;;;;:42;;:70;1020:10;:20;1031:8;1020:20;;;;;;;;;;;:26;;;977:70;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;977:70:0;1057:8;:20;1066:10;1057:20;;;;;;;;;;;;;;;:28;;1091:8;1057:43;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1057:43:0;;;;;;;;;;;;;;;;;;;;;;855:252;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <8.10.0;\n\ncontract CourseManagement {\n    struct Course {\n        uint256 id;\n        string name;\n        address payable ownerAddress;\n        uint256 price;\n        uint256[] students; // all buyers of a course\n        string imgURL;\n    }\n\n    //buyer\n    struct Student {\n        uint256 id;\n        string name;\n        uint256[] courses; //students owned courses\n    }\n\n    //seller\n    struct Instructor {\n        uint256 id;\n        string name;\n        uint256[] courses; //instructors uploaded courses\n    }\n    event courseAdded(string message);\n    mapping(uint256 => Course) allCourses;\n    mapping(address => Instructor) instructors;\n    mapping(address => Student) students;\n    address owner;\n\n    //contract owner\n    constructor() public {\n        owner = msg.sender;\n    }\n\n    function buyCourse(uint256 courseID) public payable {\n        require(msg.value >= (allCourses[courseID].price));\n        allCourses[courseID].ownerAddress.transfer(allCourses[courseID].price);\n        students[msg.sender].courses.push(courseID);\n    }\n\n    // function set(uint x) public {\n    //   storedData = x;\n    // }\n\n    // function get() public view returns (uint) {\n    //   return storedData;\n    // }\n}\n",
   "sourcePath": "C:\\Users\\deeda\\OneDrive\\Documents\\projects\\coarses-market\\contracts\\CourseManagement.sol",
   "ast": {
     "absolutePath": "project:/contracts/CourseManagement.sol",
     "exportedSymbols": {
       "CourseManagement": [
-        22
+        96
       ]
     },
-    "id": 23,
+    "id": 97,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -69,34 +73,594 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 22,
+        "id": 96,
         "linearizedBaseContracts": [
-          22
+          96
         ],
         "name": "CourseManagement",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "canonicalName": "CourseManagement.Course",
+            "id": 15,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "123:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "123:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "143:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "143:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "ownerAddress",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "164:28:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address_payable",
+                  "typeString": "address payable"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "164:15:0",
+                  "stateMutability": "payable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "202:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "202:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "students",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "225:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 10,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 11,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "225:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "imgURL",
+                "nodeType": "VariableDeclaration",
+                "scope": 15,
+                "src": "279:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "279:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Course",
+            "nodeType": "StructDefinition",
+            "scope": 96,
+            "src": "99:200:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CourseManagement.Student",
+            "id": 23,
+            "members": [
+              {
+                "constant": false,
+                "id": 17,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 23,
+                "src": "342:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 16,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "342:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 19,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 23,
+                "src": "362:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 18,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "362:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 22,
+                "name": "courses",
+                "nodeType": "VariableDeclaration",
+                "scope": 23,
+                "src": "383:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 20,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "383:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 21,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "383:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Student",
+            "nodeType": "StructDefinition",
+            "scope": 96,
+            "src": "317:115:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "CourseManagement.Instructor",
+            "id": 31,
+            "members": [
+              {
+                "constant": false,
+                "id": 25,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 31,
+                "src": "479:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 24,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "479:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 27,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 31,
+                "src": "499:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 26,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "499:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 30,
+                "name": "courses",
+                "nodeType": "VariableDeclaration",
+                "scope": 31,
+                "src": "520:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 28,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 29,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "520:9:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Instructor",
+            "nodeType": "StructDefinition",
+            "scope": 96,
+            "src": "451:124:0",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 35,
+            "name": "courseAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33,
+                  "indexed": false,
+                  "name": "message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "598:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "598:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "597:16:0"
+            },
+            "src": "580:34:0"
+          },
+          {
             "constant": false,
-            "id": 3,
-            "name": "storedData",
+            "id": 39,
+            "name": "allCourses",
             "nodeType": "VariableDeclaration",
-            "scope": 22,
-            "src": "97:15:0",
+            "scope": 96,
+            "src": "619:37:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_uint256",
-              "typeString": "uint256"
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Course_$15_storage_$",
+              "typeString": "mapping(uint256 => struct CourseManagement.Course)"
             },
             "typeName": {
-              "id": 2,
-              "name": "uint",
-              "nodeType": "ElementaryTypeName",
-              "src": "97:4:0",
+              "id": 38,
+              "keyType": {
+                "id": 36,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "627:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "619:26:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_uint256",
-                "typeString": "uint256"
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Course_$15_storage_$",
+                "typeString": "mapping(uint256 => struct CourseManagement.Course)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 37,
+                "name": "Course",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 15,
+                "src": "638:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Course_$15_storage_ptr",
+                  "typeString": "struct CourseManagement.Course"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 43,
+            "name": "instructors",
+            "nodeType": "VariableDeclaration",
+            "scope": 96,
+            "src": "662:42:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Instructor_$31_storage_$",
+              "typeString": "mapping(address => struct CourseManagement.Instructor)"
+            },
+            "typeName": {
+              "id": 42,
+              "keyType": {
+                "id": 40,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "670:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "662:30:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Instructor_$31_storage_$",
+                "typeString": "mapping(address => struct CourseManagement.Instructor)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 41,
+                "name": "Instructor",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 31,
+                "src": "681:10:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Instructor_$31_storage_ptr",
+                  "typeString": "struct CourseManagement.Instructor"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 47,
+            "name": "students",
+            "nodeType": "VariableDeclaration",
+            "scope": 96,
+            "src": "710:36:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Student_$23_storage_$",
+              "typeString": "mapping(address => struct CourseManagement.Student)"
+            },
+            "typeName": {
+              "id": 46,
+              "keyType": {
+                "id": 44,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "718:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "710:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Student_$23_storage_$",
+                "typeString": "mapping(address => struct CourseManagement.Student)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 45,
+                "name": "Student",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 23,
+                "src": "729:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Student_$23_storage_ptr",
+                  "typeString": "struct CourseManagement.Student"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 96,
+            "src": "752:13:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 48,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "752:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
               }
             },
             "value": null,
@@ -104,161 +668,575 @@
           },
           {
             "body": {
-              "id": 12,
+              "id": 57,
               "nodeType": "Block",
-              "src": "145:25:0",
+              "src": "814:35:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 10,
+                    "id": 55,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 8,
-                      "name": "storedData",
+                      "id": 52,
+                      "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "151:10:0",
+                      "referencedDeclaration": 49,
+                      "src": "824:5:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
                       }
                     },
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 9,
-                      "name": "x",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 5,
-                      "src": "164:1:0",
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 53,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 148,
+                        "src": "832:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 54,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "832:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
                       }
                     },
-                    "src": "151:14:0",
+                    "src": "824:18:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
                     }
                   },
-                  "id": 11,
+                  "id": 56,
                   "nodeType": "ExpressionStatement",
-                  "src": "151:14:0"
+                  "src": "824:18:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 13,
+            "id": 58,
             "implemented": true,
-            "kind": "function",
+            "kind": "constructor",
             "modifiers": [],
-            "name": "set",
+            "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 6,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 5,
-                  "name": "x",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 13,
-                  "src": "130:6:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 4,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "130:4:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "129:8:0"
-            },
-            "returnParameters": {
-              "id": 7,
+              "id": 50,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "145:0:0"
+              "src": "804:2:0"
             },
-            "scope": 22,
-            "src": "117:53:0",
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "814:0:0"
+            },
+            "scope": 96,
+            "src": "793:56:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 20,
+              "id": 94,
               "nodeType": "Block",
-              "src": "216:28:0",
+              "src": "907:200:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 18,
-                    "name": "storedData",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 3,
-                    "src": "229:10:0",
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 71,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 64,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 148,
+                            "src": "925:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 65,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "925:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "baseExpression": {
+                                  "argumentTypes": null,
+                                  "id": 66,
+                                  "name": "allCourses",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 39,
+                                  "src": "939:10:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Course_$15_storage_$",
+                                    "typeString": "mapping(uint256 => struct CourseManagement.Course storage ref)"
+                                  }
+                                },
+                                "id": 68,
+                                "indexExpression": {
+                                  "argumentTypes": null,
+                                  "id": 67,
+                                  "name": "courseID",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 60,
+                                  "src": "950:8:0",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "939:20:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_Course_$15_storage",
+                                  "typeString": "struct CourseManagement.Course storage ref"
+                                }
+                              },
+                              "id": 69,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "price",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 9,
+                              "src": "939:26:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "id": 70,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "938:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "925:41:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 63,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        151,
+                        152
+                      ],
+                      "referencedDeclaration": 151,
+                      "src": "917:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "917:50:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "ExpressionStatement",
+                  "src": "917:50:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 79,
+                            "name": "allCourses",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39,
+                            "src": "1020:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Course_$15_storage_$",
+                              "typeString": "mapping(uint256 => struct CourseManagement.Course storage ref)"
+                            }
+                          },
+                          "id": 81,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 80,
+                            "name": "courseID",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 60,
+                            "src": "1031:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1020:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Course_$15_storage",
+                            "typeString": "struct CourseManagement.Course storage ref"
+                          }
+                        },
+                        "id": 82,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "price",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 9,
+                        "src": "1020:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 74,
+                            "name": "allCourses",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39,
+                            "src": "977:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Course_$15_storage_$",
+                              "typeString": "mapping(uint256 => struct CourseManagement.Course storage ref)"
+                            }
+                          },
+                          "id": 76,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 75,
+                            "name": "courseID",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 60,
+                            "src": "988:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "977:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Course_$15_storage",
+                            "typeString": "struct CourseManagement.Course storage ref"
+                          }
+                        },
+                        "id": 77,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "ownerAddress",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 7,
+                        "src": "977:33:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "977:42:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 83,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "977:70:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 84,
+                  "nodeType": "ExpressionStatement",
+                  "src": "977:70:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 91,
+                        "name": "courseID",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "1091:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 85,
+                            "name": "students",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 47,
+                            "src": "1057:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Student_$23_storage_$",
+                              "typeString": "mapping(address => struct CourseManagement.Student storage ref)"
+                            }
+                          },
+                          "id": 88,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 86,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 148,
+                              "src": "1066:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 87,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1066:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1057:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Student_$23_storage",
+                            "typeString": "struct CourseManagement.Student storage ref"
+                          }
+                        },
+                        "id": 89,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "courses",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 22,
+                        "src": "1057:28:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                          "typeString": "uint256[] storage ref"
+                        }
+                      },
+                      "id": 90,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1057:33:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) returns (uint256)"
+                      }
+                    },
+                    "id": 92,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1057:43:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 17,
-                  "id": 19,
-                  "nodeType": "Return",
-                  "src": "222:17:0"
+                  "id": 93,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1057:43:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 21,
+            "id": 95,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "get",
+            "name": "buyCourse",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 14,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "186:2:0"
-            },
-            "returnParameters": {
-              "id": 17,
+              "id": 61,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 16,
-                  "name": "",
+                  "id": 60,
+                  "name": "courseID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 21,
-                  "src": "210:4:0",
+                  "scope": 95,
+                  "src": "874:16:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -266,10 +1244,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 15,
-                    "name": "uint",
+                    "id": 59,
+                    "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "210:4:0",
+                    "src": "874:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -279,27 +1257,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "209:6:0"
+              "src": "873:18:0"
             },
-            "scope": 22,
-            "src": "174:70:0",
-            "stateMutability": "view",
+            "returnParameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "907:0:0"
+            },
+            "scope": 96,
+            "src": "855:252:0",
+            "stateMutability": "payable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 23,
-        "src": "67:179:0"
+        "scope": 97,
+        "src": "67:1203:0"
       }
     ],
-    "src": "32:215:0"
+    "src": "32:1239:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/CourseManagement.sol",
       "exportedSymbols": {
         "CourseManagement": [
-          22
+          96
         ]
       }
     },
@@ -332,52 +1316,402 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            22
+            96
           ],
           "name": "CourseManagement",
-          "scope": 23
+          "scope": 97
         },
         "children": [
           {
             "attributes": {
-              "constant": false,
-              "name": "storedData",
-              "scope": 22,
-              "stateVariable": true,
-              "storageLocation": "default",
-              "type": "uint256",
-              "value": null,
-              "visibility": "internal"
+              "canonicalName": "CourseManagement.Course",
+              "name": "Course",
+              "scope": 96,
+              "visibility": "public"
             },
             "children": [
               {
                 "attributes": {
-                  "name": "uint",
-                  "type": "uint256"
+                  "constant": false,
+                  "name": "id",
+                  "scope": 15,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
                 },
-                "id": 2,
-                "name": "ElementaryTypeName",
-                "src": "97:4:0"
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "123:7:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "123:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "name",
+                  "scope": 15,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "143:6:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "143:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ownerAddress",
+                  "scope": 15,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address payable",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "payable",
+                      "type": "address payable"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "164:15:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "164:28:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "price",
+                  "scope": 15,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "202:7:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "202:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "students",
+                  "scope": 15,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256[]",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "uint256[]"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 10,
+                        "name": "ElementaryTypeName",
+                        "src": "225:7:0"
+                      }
+                    ],
+                    "id": 11,
+                    "name": "ArrayTypeName",
+                    "src": "225:9:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "225:18:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "imgURL",
+                  "scope": 15,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 13,
+                    "name": "ElementaryTypeName",
+                    "src": "279:6:0"
+                  }
+                ],
+                "id": 14,
+                "name": "VariableDeclaration",
+                "src": "279:13:0"
               }
             ],
-            "id": 3,
-            "name": "VariableDeclaration",
-            "src": "97:15:0"
+            "id": 15,
+            "name": "StructDefinition",
+            "src": "99:200:0"
           },
           {
             "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "set",
-              "scope": 22,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
+              "canonicalName": "CourseManagement.Student",
+              "name": "Student",
+              "scope": 96,
               "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 23,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 16,
+                    "name": "ElementaryTypeName",
+                    "src": "342:7:0"
+                  }
+                ],
+                "id": 17,
+                "name": "VariableDeclaration",
+                "src": "342:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "name",
+                  "scope": 23,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 18,
+                    "name": "ElementaryTypeName",
+                    "src": "362:6:0"
+                  }
+                ],
+                "id": 19,
+                "name": "VariableDeclaration",
+                "src": "362:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "courses",
+                  "scope": 23,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256[]",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "uint256[]"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 20,
+                        "name": "ElementaryTypeName",
+                        "src": "383:7:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "ArrayTypeName",
+                    "src": "383:9:0"
+                  }
+                ],
+                "id": 22,
+                "name": "VariableDeclaration",
+                "src": "383:17:0"
+              }
+            ],
+            "id": 23,
+            "name": "StructDefinition",
+            "src": "317:115:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "CourseManagement.Instructor",
+              "name": "Instructor",
+              "scope": 96,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "id",
+                  "scope": 31,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 24,
+                    "name": "ElementaryTypeName",
+                    "src": "479:7:0"
+                  }
+                ],
+                "id": 25,
+                "name": "VariableDeclaration",
+                "src": "479:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "name",
+                  "scope": 31,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 26,
+                    "name": "ElementaryTypeName",
+                    "src": "499:6:0"
+                  }
+                ],
+                "id": 27,
+                "name": "VariableDeclaration",
+                "src": "499:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "courses",
+                  "scope": 31,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256[]",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "uint256[]"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 28,
+                        "name": "ElementaryTypeName",
+                        "src": "520:7:0"
+                      }
+                    ],
+                    "id": 29,
+                    "name": "ArrayTypeName",
+                    "src": "520:9:0"
+                  }
+                ],
+                "id": 30,
+                "name": "VariableDeclaration",
+                "src": "520:17:0"
+              }
+            ],
+            "id": 31,
+            "name": "StructDefinition",
+            "src": "451:124:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "courseAdded"
             },
             "children": [
               {
@@ -385,33 +1719,234 @@
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "x",
-                      "scope": 13,
+                      "indexed": false,
+                      "name": "message",
+                      "scope": 35,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "uint256",
+                      "type": "string",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "uint",
-                          "type": "uint256"
+                          "name": "string",
+                          "type": "string"
                         },
-                        "id": 4,
+                        "id": 32,
                         "name": "ElementaryTypeName",
-                        "src": "130:4:0"
+                        "src": "598:6:0"
                       }
                     ],
-                    "id": 5,
+                    "id": 33,
                     "name": "VariableDeclaration",
-                    "src": "130:6:0"
+                    "src": "598:14:0"
                   }
                 ],
-                "id": 6,
+                "id": 34,
                 "name": "ParameterList",
-                "src": "129:8:0"
+                "src": "597:16:0"
+              }
+            ],
+            "id": 35,
+            "name": "EventDefinition",
+            "src": "580:34:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "allCourses",
+              "scope": 96,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct CourseManagement.Course)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct CourseManagement.Course)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 36,
+                    "name": "ElementaryTypeName",
+                    "src": "627:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Course",
+                      "referencedDeclaration": 15,
+                      "type": "struct CourseManagement.Course"
+                    },
+                    "id": 37,
+                    "name": "UserDefinedTypeName",
+                    "src": "638:6:0"
+                  }
+                ],
+                "id": 38,
+                "name": "Mapping",
+                "src": "619:26:0"
+              }
+            ],
+            "id": 39,
+            "name": "VariableDeclaration",
+            "src": "619:37:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "instructors",
+              "scope": 96,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct CourseManagement.Instructor)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct CourseManagement.Instructor)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 40,
+                    "name": "ElementaryTypeName",
+                    "src": "670:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Instructor",
+                      "referencedDeclaration": 31,
+                      "type": "struct CourseManagement.Instructor"
+                    },
+                    "id": 41,
+                    "name": "UserDefinedTypeName",
+                    "src": "681:10:0"
+                  }
+                ],
+                "id": 42,
+                "name": "Mapping",
+                "src": "662:30:0"
+              }
+            ],
+            "id": 43,
+            "name": "VariableDeclaration",
+            "src": "662:42:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "students",
+              "scope": 96,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct CourseManagement.Student)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct CourseManagement.Student)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 44,
+                    "name": "ElementaryTypeName",
+                    "src": "718:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Student",
+                      "referencedDeclaration": 23,
+                      "type": "struct CourseManagement.Student"
+                    },
+                    "id": 45,
+                    "name": "UserDefinedTypeName",
+                    "src": "729:7:0"
+                  }
+                ],
+                "id": 46,
+                "name": "Mapping",
+                "src": "710:27:0"
+              }
+            ],
+            "id": 47,
+            "name": "VariableDeclaration",
+            "src": "710:36:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owner",
+              "scope": 96,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 48,
+                "name": "ElementaryTypeName",
+                "src": "752:7:0"
+              }
+            ],
+            "id": 49,
+            "name": "VariableDeclaration",
+            "src": "752:13:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 96,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 50,
+                "name": "ParameterList",
+                "src": "804:2:0"
               },
               {
                 "attributes": {
@@ -420,9 +1955,9 @@
                   ]
                 },
                 "children": [],
-                "id": 7,
+                "id": 51,
                 "name": "ParameterList",
-                "src": "145:0:0"
+                "src": "814:0:0"
               },
               {
                 "children": [
@@ -436,7 +1971,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "operator": "=",
-                          "type": "uint256"
+                          "type": "address"
                         },
                         "children": [
                           {
@@ -445,47 +1980,64 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3,
-                              "type": "uint256",
-                              "value": "storedData"
+                              "referencedDeclaration": 49,
+                              "type": "address",
+                              "value": "owner"
                             },
-                            "id": 8,
+                            "id": 52,
                             "name": "Identifier",
-                            "src": "151:10:0"
+                            "src": "824:5:0"
                           },
                           {
                             "attributes": {
                               "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 5,
-                              "type": "uint256",
-                              "value": "x"
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
                             },
-                            "id": 9,
-                            "name": "Identifier",
-                            "src": "164:1:0"
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 148,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 53,
+                                "name": "Identifier",
+                                "src": "832:3:0"
+                              }
+                            ],
+                            "id": 54,
+                            "name": "MemberAccess",
+                            "src": "832:10:0"
                           }
                         ],
-                        "id": 10,
+                        "id": 55,
                         "name": "Assignment",
-                        "src": "151:14:0"
+                        "src": "824:18:0"
                       }
                     ],
-                    "id": 11,
+                    "id": 56,
                     "name": "ExpressionStatement",
-                    "src": "151:14:0"
+                    "src": "824:18:0"
                   }
                 ],
-                "id": 12,
+                "id": 57,
                 "name": "Block",
-                "src": "145:25:0"
+                "src": "814:35:0"
               }
             ],
-            "id": 13,
+            "id": 58,
             "name": "FunctionDefinition",
-            "src": "117:53:0"
+            "src": "793:56:0"
           },
           {
             "attributes": {
@@ -496,31 +2048,20 @@
               "modifiers": [
                 null
               ],
-              "name": "get",
-              "scope": 22,
-              "stateMutability": "view",
+              "name": "buyCourse",
+              "scope": 96,
+              "stateMutability": "payable",
               "superFunction": null,
               "visibility": "public"
             },
             "children": [
               {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 14,
-                "name": "ParameterList",
-                "src": "186:2:0"
-              },
-              {
                 "children": [
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "",
-                      "scope": 21,
+                      "name": "courseID",
+                      "scope": 95,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -530,68 +2071,538 @@
                     "children": [
                       {
                         "attributes": {
-                          "name": "uint",
+                          "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 15,
+                        "id": 59,
                         "name": "ElementaryTypeName",
-                        "src": "210:4:0"
+                        "src": "874:7:0"
                       }
                     ],
-                    "id": 16,
+                    "id": 60,
                     "name": "VariableDeclaration",
-                    "src": "210:4:0"
+                    "src": "874:16:0"
                   }
                 ],
-                "id": 17,
+                "id": 61,
                 "name": "ParameterList",
-                "src": "209:6:0"
+                "src": "873:18:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 62,
+                "name": "ParameterList",
+                "src": "907:0:0"
               },
               {
                 "children": [
                   {
-                    "attributes": {
-                      "functionReturnParameters": 17
-                    },
                     "children": [
                       {
                         "attributes": {
                           "argumentTypes": null,
-                          "overloadedDeclarations": [
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
                             null
                           ],
-                          "referencedDeclaration": 3,
-                          "type": "uint256",
-                          "value": "storedData"
+                          "type": "tuple()",
+                          "type_conversion": false
                         },
-                        "id": 18,
-                        "name": "Identifier",
-                        "src": "229:10:0"
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                151,
+                                152
+                              ],
+                              "referencedDeclaration": 151,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "917:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 148,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 64,
+                                    "name": "Identifier",
+                                    "src": "925:3:0"
+                                  }
+                                ],
+                                "id": 65,
+                                "name": "MemberAccess",
+                                "src": "925:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "price",
+                                      "referencedDeclaration": 9,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct CourseManagement.Course storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 39,
+                                              "type": "mapping(uint256 => struct CourseManagement.Course storage ref)",
+                                              "value": "allCourses"
+                                            },
+                                            "id": 66,
+                                            "name": "Identifier",
+                                            "src": "939:10:0"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 60,
+                                              "type": "uint256",
+                                              "value": "courseID"
+                                            },
+                                            "id": 67,
+                                            "name": "Identifier",
+                                            "src": "950:8:0"
+                                          }
+                                        ],
+                                        "id": 68,
+                                        "name": "IndexAccess",
+                                        "src": "939:20:0"
+                                      }
+                                    ],
+                                    "id": 69,
+                                    "name": "MemberAccess",
+                                    "src": "939:26:0"
+                                  }
+                                ],
+                                "id": 70,
+                                "name": "TupleExpression",
+                                "src": "938:28:0"
+                              }
+                            ],
+                            "id": 71,
+                            "name": "BinaryOperation",
+                            "src": "925:41:0"
+                          }
+                        ],
+                        "id": 72,
+                        "name": "FunctionCall",
+                        "src": "917:50:0"
                       }
                     ],
-                    "id": 19,
-                    "name": "Return",
-                    "src": "222:17:0"
+                    "id": 73,
+                    "name": "ExpressionStatement",
+                    "src": "917:50:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "transfer",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "ownerAddress",
+                                  "referencedDeclaration": 7,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct CourseManagement.Course storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 39,
+                                          "type": "mapping(uint256 => struct CourseManagement.Course storage ref)",
+                                          "value": "allCourses"
+                                        },
+                                        "id": 74,
+                                        "name": "Identifier",
+                                        "src": "977:10:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 60,
+                                          "type": "uint256",
+                                          "value": "courseID"
+                                        },
+                                        "id": 75,
+                                        "name": "Identifier",
+                                        "src": "988:8:0"
+                                      }
+                                    ],
+                                    "id": 76,
+                                    "name": "IndexAccess",
+                                    "src": "977:20:0"
+                                  }
+                                ],
+                                "id": 77,
+                                "name": "MemberAccess",
+                                "src": "977:33:0"
+                              }
+                            ],
+                            "id": 78,
+                            "name": "MemberAccess",
+                            "src": "977:42:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "price",
+                              "referencedDeclaration": 9,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct CourseManagement.Course storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 39,
+                                      "type": "mapping(uint256 => struct CourseManagement.Course storage ref)",
+                                      "value": "allCourses"
+                                    },
+                                    "id": 79,
+                                    "name": "Identifier",
+                                    "src": "1020:10:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 60,
+                                      "type": "uint256",
+                                      "value": "courseID"
+                                    },
+                                    "id": 80,
+                                    "name": "Identifier",
+                                    "src": "1031:8:0"
+                                  }
+                                ],
+                                "id": 81,
+                                "name": "IndexAccess",
+                                "src": "1020:20:0"
+                              }
+                            ],
+                            "id": 82,
+                            "name": "MemberAccess",
+                            "src": "1020:26:0"
+                          }
+                        ],
+                        "id": 83,
+                        "name": "FunctionCall",
+                        "src": "977:70:0"
+                      }
+                    ],
+                    "id": 84,
+                    "name": "ExpressionStatement",
+                    "src": "977:70:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "courses",
+                                  "referencedDeclaration": 22,
+                                  "type": "uint256[] storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct CourseManagement.Student storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 47,
+                                          "type": "mapping(address => struct CourseManagement.Student storage ref)",
+                                          "value": "students"
+                                        },
+                                        "id": 85,
+                                        "name": "Identifier",
+                                        "src": "1057:8:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "sender",
+                                          "referencedDeclaration": null,
+                                          "type": "address payable"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 148,
+                                              "type": "msg",
+                                              "value": "msg"
+                                            },
+                                            "id": 86,
+                                            "name": "Identifier",
+                                            "src": "1066:3:0"
+                                          }
+                                        ],
+                                        "id": 87,
+                                        "name": "MemberAccess",
+                                        "src": "1066:10:0"
+                                      }
+                                    ],
+                                    "id": 88,
+                                    "name": "IndexAccess",
+                                    "src": "1057:20:0"
+                                  }
+                                ],
+                                "id": 89,
+                                "name": "MemberAccess",
+                                "src": "1057:28:0"
+                              }
+                            ],
+                            "id": 90,
+                            "name": "MemberAccess",
+                            "src": "1057:33:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 60,
+                              "type": "uint256",
+                              "value": "courseID"
+                            },
+                            "id": 91,
+                            "name": "Identifier",
+                            "src": "1091:8:0"
+                          }
+                        ],
+                        "id": 92,
+                        "name": "FunctionCall",
+                        "src": "1057:43:0"
+                      }
+                    ],
+                    "id": 93,
+                    "name": "ExpressionStatement",
+                    "src": "1057:43:0"
                   }
                 ],
-                "id": 20,
+                "id": 94,
                 "name": "Block",
-                "src": "216:28:0"
+                "src": "907:200:0"
               }
             ],
-            "id": 21,
+            "id": 95,
             "name": "FunctionDefinition",
-            "src": "174:70:0"
+            "src": "855:252:0"
           }
         ],
-        "id": 22,
+        "id": 96,
         "name": "ContractDefinition",
-        "src": "67:179:0"
+        "src": "67:1203:0"
       }
     ],
-    "id": 23,
+    "id": 97,
     "name": "SourceUnit",
-    "src": "32:215:0"
+    "src": "32:1239:0"
   },
   "compiler": {
     "name": "solc",
@@ -606,7 +2617,7 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-05-20T22:18:21.815Z",
+  "updatedAt": "2022-05-21T08:49:29.676Z",
   "devdoc": {
     "methods": {}
   },
