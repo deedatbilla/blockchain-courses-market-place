@@ -25,8 +25,12 @@ contract CourseManagement {
   }
   event courseAdded(string message);
   mapping(uint => Course) courses;
-  mapping(address => Instructor) instructors;
-  mapping(address => Student) students;
+  mapping(address  => Instructor)  instructors;
+  mapping(address => Student)  students;
+
+  address[] public instructorAccts;
+  uint[] public allcourses;
+  address[] public studentsAccts;
 
   constructor() public{
   
@@ -34,11 +38,5 @@ contract CourseManagement {
 }
 
 
-  // function set(uint x) public {
-  //   storedData = x;
-  // }
-
-  // function get() public view returns (uint) {
-  //   return storedData;
-  // }
+ 
 }
