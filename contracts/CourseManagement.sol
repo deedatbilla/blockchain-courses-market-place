@@ -24,6 +24,10 @@ contract CourseManagement {
     uint[] courses;
   }
   event courseAdded(string message);
+  mapping(uint => Course) courses;
+  mapping(address => Instructor) instructors;
+  mapping(address => Student) students;
+
   constructor() public{
   
     
