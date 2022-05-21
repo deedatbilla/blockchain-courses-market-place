@@ -14,14 +14,14 @@ contract CourseManagement {
   struct Student {
     uint id;
     string name;
-    uint[] courses;
+    uint[] courses; //students owned courses
   }
 
   //seller
   struct Instructor {
     uint id;
     string name;
-    uint[] courses;
+    uint[] courses; //instructors uploaded courses
   }
   event courseAdded(string message);
   mapping(uint => Course) courses;
@@ -32,6 +32,8 @@ contract CourseManagement {
   
     
 }
+
+
   // function set(uint x) public {
   //   storedData = x;
   // }
