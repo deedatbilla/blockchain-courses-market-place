@@ -2,13 +2,37 @@
 pragma solidity >=0.4.21 <8.10.0;
 
 contract CourseManagement {
-  uint storedData;
-
-  function set(uint x) public {
-    storedData = x;
+  struct Course {
+    uint id;
+    string name;
+    uint price;
+    uint[] students; // all buyers of a course
+    string imgURL;
   }
 
-  function get() public view returns (uint) {
-    return storedData;
+  //buyer
+  struct Student {
+    uint id;
+    string name;
+    uint[] courses;
   }
+
+  //seller
+  struct Instructor {
+    uint id;
+    string name;
+    uint[] courses;
+  }
+  event courseAdded(string message);
+  constructor() public{
+  
+    
+}
+  // function set(uint x) public {
+  //   storedData = x;
+  // }
+
+  // function get() public view returns (uint) {
+  //   return storedData;
+  // }
 }
