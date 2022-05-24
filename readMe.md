@@ -6,4 +6,5 @@
 - To compile smart contract
 - Run `npm install -g truffle`
 - Install Ganche
-- Run `truffle migrate --network develop` to compile and deploy smart contract to the  personal Ethereum blockchain(Ganache)
+- Run `truffle compile` to compile smart contract
+- Run `truffle migrate --network develop`to deploy smart contract to the  personal Ethereum blockchain(Ganache)
